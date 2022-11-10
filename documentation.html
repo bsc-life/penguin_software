@@ -1,0 +1,60 @@
+<!-- #######  PENGUIN DOCUMENTATION #########-->
+<html>
+<body style="background-color:white;">
+<h1 style="color: #5e9ca0;">PENGUIN dashboard tutorial</h1>
+<h2 style="color: #2e6c80;">How to use the PENGUIN dashboard:</h2>
+<p><strong>PENGUIN</strong> (Promoter-ENhancer-GUided Interaction Networks) is a graph-based approach to study protein interactions in chromatin contact regions. The approach is based on the identification of Enhancers-Promoter Protein-protein Interaction Networks (EPINs) that are protein interactions conditioned to chromatin contacts. PENGUIN detects one EPIN for each promoter engaged in enhancer contacts by integrating several sources of information:</p>
+<ul>
+<li style="clear: both;">H3K27ac-HiChiP promoter-enhancer contacts</li>
+<li style="clear: both;">RNA-seq gene expression</li>
+<li style="clear: both;">tissue-specific physical nuclear protein interactions</li>
+<li style="clear: both;">high-quality curated DNA binding motifs</li>
+</ul>
+<p>The <strong>PENGUIN dashboard</strong> allows exploring the results of the application of the PENGUIN approach in <strong>prostate cancer</strong> (PrCa), where we identified and characterized a total of 4,314 promoter and the corresponding EPINs. In this tutorial we will journey through the main functionalities of this interactive web page.</p>
+<h2 style="color: #2e6c80;">Navigation bar</h2>
+<p>The navigation bar consists of three elements. The <strong style="color: #5e9ca0;">About</strong> popover shows general information about the PENGUIN approach. The <strong style="color: #5e9ca0;">Links</strong> downdrop menu shows external links to the <strong>Github</strong> repository of the dashboard and this <strong>documentation</strong>.</p> 
+<p>The <span style="background-color: #5e9ca0;; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Download the network</span> button downloads a TSV (tab-separated) formatted file describing the network that is currently displayed.</p>
+<p style="text-align:center;"><img src="doc_images/doc_01.png?rawfile=true" class="center"/><br /></p>
+<h2 style="color: #2e6c80;">Input field</h2>
+<p>The input field is placed on the left-hand side of the page and consists of a series of selectors. The <strong style="color: #5e9ca0;">Promoter</strong> selector is a dropdown menu that allows selecting the promoter for which the corresponding EPIN is displayed in the output field.</p>
+<p style="text-align:center;"><img src="doc_images/doc_02.png?rawfile=true" class="center"/><br /></p>
+<p>To better highlight the different elements of such network, additional selectors are available. The <strong style="color: #5e9ca0;">DBPs displayed size</strong> and the <strong style="color: #5e9ca0;">DBPs displayed color</strong> selectors are dropdown menus that allow changing size and color of the nodes corresponsing to <strong>DNA-binding proteins (DBPs)</strong>, i.e. the circles that are displayed vertically on the left (indicated as "Promoter" side) and on the right (indicated as "Enhancer(s)" side) of the output image. The visualization methods that can be chosen are:</p>
+
+<li style="clear: both;"><span style="color: #5e9ca0;">degree</span>: visualization based on the number of edges that are incident to a node</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">expression_log2FoldChange</span>: visualization based on log2FC values of the differential expression analysis of prostate tumor vs normal from <a href="http://gepia.cancer-pku.cn/">GEPIA</a></li>
+<li style="clear: both;"><span style="color: #5e9ca0;">expression_padj</span>: visualization based on adjusted p-values of the differential expression analysis of prostate tumor vs normal from <a href="http://gepia.cancer-pku.cn/">GEPIA</a></li>
+<li style="clear: both;"><span style="color: #5e9ca0;">fisher_test_OR</span>: visualization based on Odd Ratios of a Fisher's exact test</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">fisher_test_pval</span>: visualization based on p-values of a Fisher's exact test</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Node_druggability</span>: visualization based on node druggability information extracted from <a ref="http://iid.ophid.utoronto.ca/">IID</a></li>
+
+<p>The <strong style="color: #5e9ca0;">Intermediates displayed size</strong> and the <strong style="color: #5e9ca0;">Intermediates displayed color</strong> selectors are dropdown menus that allow changing size and color of the nodes corresponsing to <strong>intermediate proteins</strong>, i.e. the circles that are displayed in the center of the output image between the "Promoter" side and the "Enhancer" side. The additional visualization methods that can be chosen are:</p>
+
+<li style="clear: both;"><span style="color: #5e9ca0;">Betweenness_global</span>: visualization based on global betweenness centrality</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Degree_global</span>: visualization based on global degree</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Betweenness_in_cluster</span>: visualization based on in-cluster betweenness centrality</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Betweenness_out_cluster</span>: visualization based on out-cluster betweenness centrality</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Betweenness_enrichment</span>: visualization based on global betweenness centrality enrichment</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Degree_in_cluster</span>: visualization based on in-cluster degree</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Degree_out_cluster</span>: visualization based on out-cluster degree</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Degree_enrichment</span>: visualization based on global degree enrichment</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Betweenness_enrichment_pval</span>: visualization based on significance of global betweenness enrichment (Fisher's exact test)</li>
+<li style="clear: both;"><span style="color: #5e9ca0;">Degree_enrichment_pval</span>: visualization based on significance of global degree enrichment (Fisher's exact test)</li>
+
+<p>Two sliders, called <strong style="color: #5e9ca0;">Differential expression cutoff (GEPIA) [log2FC]</strong> and <strong style="color: #5e9ca0;">Expression cutoff (LNCaP) [FPKM]</strong>, enable to drop nodes based on <strong>gene expression cutoffs</strong> that use log2FC values of the differential expression analysis of prostate tumor vs normal from <a href="http://gepia.cancer-pku.cn/">GEPIA</a> and FPKM values of LNCaP, respectively</p>
+
+<p>Finally, four toggle switches allow adding (right switched) or removing (left switched) specific types of nodes and edges. In particular, <strong style="color: #5e9ca0;">SNP paths (PrCa SNPs in enchancer binding motifs)</strong> controls the visualization of the set of edges that bridge promoter-bound DBPs and intermediate proteins with <strong>enhancer-bound DBPs with PrCa SNPs falling in their binding motif</strong>. <strong style="color: #5e9ca0;">SNP paths (PrCa SNPs in intermediate proteins)</strong> controls the visualization of the set of edges that bridge promoter-bound DBPs with enhancer-bound DBPs through <strong>intermediate proteins with PrCa SNPs falling in the genomic region of the corresponding coding gene</strong>.</p> 
+<p>The remaining two toggle switches, namely <strong style="color: #5e9ca0;">Nodes enriched in cluster GWAS+</strong> and <strong style="color: #5e9ca0;">Edges enriched in cluster GWAS+</strong>, control the visualization of nodes and edges that have been found to be enriched in the cluster GWAS+ (see manuscript for more details).</p>
+
+
+<h2 style="color: #2e6c80;">Output field</h2>
+
+The output field is placed on the center of the page and consists of a picture of the network displayed based on the parameters of the input field. The picture can be downloaded by right clicking on it and select "Save Image As...". The color of the edges indicate network paths with PrCa SNPs in enhancer binding motif (<strong><span style="color: #ffc864;">orange</span></strong>), network paths with PrCa SNPs in the gene coding for the intermediate proteins (<strong><span style="color: #308130;">green</span></strong>), or both (<strong><span style="color: #922592;">purple</span></strong>). PrCa SNPs in enchancer binding motifs are indicated beside the name of the enhancer-bound DBP, while PrCa SNPs in intermediate proteins are indicated with an asterisk. The protein found to be enriched in the cluster GWAS+ are highlighted in bold. Finally, druggable proteins from <a href="http://go.drugbank.com/">DrugBank</a> are indicated as triangles.</p>
+
+<p style="text-align:center;"><img src="doc_images/doc_03.png?rawfile=true"/><br /></p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>
