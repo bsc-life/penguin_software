@@ -1,0 +1,1 @@
+"all_genes"	"mean_bet_in"	"mean_bet_out"	"ratio_bet"	"mean_deg_in"	"mean_deg_out"	"ratio_deg"	"pvalue_ratio"	"pvalue_degree"
