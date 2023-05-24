@@ -11,6 +11,7 @@ README File for node importance significance analysis
 ### Outputs
 - Full results per cluster: full_betweness_proteins_cluster_*.cmd 1 per cluster
 - Double Significant rows from the full results (significant for both degree and betweenness -pvalue < 0.05): significant_proteins_cluster_*.txt
+- PLEASE NOTE THAT AS INPUT FOR THE ENRICHMENT ANALYSIS WITH G:PROFILER WE CONSIDER DOUBLE SIGNIFICANT ROWS WITH P-VALUE < 0.01.
 
 ### Columns from output files (for cluster output i) (for a given row j) :
 -all_genes : The node protein j
