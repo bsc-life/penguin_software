@@ -4,7 +4,7 @@ README File for node importance significance analysis
 - Custom_CTCF_lncap_ENCFF155SPQ_8_all-nodes_overlap-metaloop_clusters.tsv
 - intermediate_stats_df.txt
 
-### Scripts (For running at a SLURM-based cluster)
+### Scripts (For running at a SLURM-based cluster machine)
 - Base randomization scripts: Betweness_significance_analysis_cluster_*.R . 1 per cluster
 - Job text files: Betw_sig_analysis_cluster_*.cmd . 1 per cluster. Expected runtime ~ 4h. Each job asks for 1 cpu of 1 node.
 
