@@ -1,4 +1,8 @@
 # penguin_software
+
+[![DOI](https://zenodo.org/badge/564280381.svg)](https://zenodo.org/doi/10.5281/zenodo.10036677)
+
+
 MIT License
 
 Copyright (c) 2023 Alexandros Armaos, François Serra, Iker Núñez-Carpintero, Caludia Giambartolomei, Davide Cirillo, Gian Gaetano Tartaglia
